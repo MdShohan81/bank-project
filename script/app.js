@@ -6,8 +6,13 @@ document.getElementById('login-btn').addEventListener('click', function(){
     const userPassword = passwordFiled.value;
 
     if(userEmail == 'shohan@gmail.com' && userPassword == 'Shohan81'){
-        console.log('user valid');
+        location.href = 'banking.html'
     }else{
-        console.log('email or password invalid');
+        let errorShowTag = document.createElement('p');
+        const text = document.createTextNode("can't found a page error 404");
+        errorShowTag.appendChild(text)
+        const element = document.getElementById('invalid');
+        element.appendChild(errorShowTag);
+
     }
 })
